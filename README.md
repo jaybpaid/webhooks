@@ -32,7 +32,7 @@ githubToken=<github api token>
 
 ``` 
 docker run --rm -ti -p 4567:4567 -v $PWD/.webhook_properties:/usr/src/app/.webhook_properties \
-	--name github-webhooks jimzucker/github-webhooks:latest
+	--name github-webhooks jaybpaid/webhooks:latest
 ```
 
 ## Example docker-compose
@@ -43,7 +43,7 @@ You change the parameters for the webhooks by creating a local copy over overrit
 version: '3.4'
 services:
   github-webhooks:
-    image: jimzucker/github-webhooks:latest
+    image: jaybpaid/webhooks:latest
     container_name: github-webhooks
     restart: unless-stopped
     ports:
@@ -103,7 +103,7 @@ Reference: https://developer.github.com/v3/repos/branches/#update-branch-protect
 
 ##### Github project
 
-https://github.com/jimzucker/github-webhooks
+https://github.com/jaybpaid/webhooks
 
 
 ##### Instructions to run Manually outside of Docker from github source
